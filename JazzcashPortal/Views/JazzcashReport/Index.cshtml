@@ -1,0 +1,73 @@
+﻿@{
+    Layout = "_Layout";
+}
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+<div class="right_col" role="main">
+    <div class="col-md-12 col-sm-12">
+        <div class="bg-white p-3">
+
+            <div class="d-flex justify-content-between align-items-center mb-3" style="padding: 5px;">
+                <h2 style="color: #3b5167;"><small>Jazzcash Report</small></h2>
+            </div>
+
+
+            <!-- Bootstrap Modal for Create Form -->
+            <div class="modal-content">
+                <form id="jazzcashReportSetup">
+
+                    <div class="modal-body">
+                        <div class="row">
+
+                            @* <div class="col-sm-6 col-lg-4 col-md-4">
+                                        <label asp-for="PRODUCT_NAME">Institution Name:</label>
+                                        <div class="form-group">
+                                            <input type="text" asp-for="PRODUCT_NAME" class="form-control" placeholder="Enter Product Name" />
+                                            <span asp-validation-for="PRODUCT_NAME" class="text-danger"></span>
+                                            <input type="hidden" asp-for="PRODUCT_ID" class="form-control" />
+                                        </div>
+                                    </div> *@
+
+                            <div class="col-sm-6 col-lg-4 col-md-4">
+                                <label>Id:</label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Enter Id" />
+                                    @* <span asp-validation-for="SUMCOVERED" class="text-danger"></span> *@
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-lg-3 col-md-3">
+                                <br />
+                                <div class="form-group">
+                                    <button type="submit" id="btnSearch_JazzcashReport" class="btn btn-success w-100"><i class="fa fa-search"></i> Search</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    @* <div class="modal-footer">
+
+                        <div class="row w-100">
+                            <div class="col-lg-4 col-md-6 col-sm-12" id="divSave_JazzcashReport">
+                                <button type="submit" id="btnSearch_JazzcashReport" class="btn btn-success w-100"><i class="fa fa-search"></i> Search</button>
+                            </div>
+                        </div>
+                    </div> *@
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="~/js/jazzcash-report.js"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+    });
+</script>
