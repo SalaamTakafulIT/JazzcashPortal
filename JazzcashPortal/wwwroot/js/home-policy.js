@@ -33,7 +33,7 @@ function LoadHomePolicy(data) {
         dom: 'lBfrtip',
         buttons: ['excelHtml5', 'print'],
         select: true,
-        order: [[0, "desc"]],
+        order: [['ENT_DATE', "asc"]],
         buttons: [
             {
                 extend: 'colvis',
@@ -88,6 +88,20 @@ function LoadHomePolicy(data) {
                 }
             },
             {
+                data: "ENT_DATE", title: "Ent Date",
+                render: function (data, type, row) {
+                    if (type === 'display') {
+                        if (!data) return '';
+                        return new Date(data).toLocaleString('en-GB', {
+                            day: '2-digit', month: 'short', year: 'numeric',
+                            hour: '2-digit', minute: '2-digit', second: '2-digit',
+                            hour12: true
+                        });
+                    }
+                    return data;
+                }
+            },
+            {
                 data: "CNIC", title: "Cnic",
                 render: function (data, type, row) {
                     return formatCell(data);
@@ -113,13 +127,13 @@ function LoadHomePolicy(data) {
                 }
             },
             {
-                data: "POLICY_CODE",
+                data: "POLICY_TRANSACTION_ID",
                 title: "Action",
                 width: "150px",
                 render: function (data, type, row, meta) {
                     if (type === 'display') {
                         if (row["ENDORSEMENT_CODE"] == "" || row["ENDORSEMENT_CODE"] == null) {
-                            return `<button type="button" class="btn btn-danger reversePolicy" data-id="${data}"><i class="fa fa-undo"></i> Reverse</button>`;
+                            return `<button type="button" class="btn btn-danger reversePolicy" data-trans_id="${data}" data-policy_id="${data}"><i class="fa fa-undo"></i> Reverse</button>`;
                         }
                         else {
                             return `<button type="button" class="btn btn-danger reversePolicy" data-id="${data}" disabled><i class="fa fa-undo"></i> Reverse</button>`;
@@ -150,11 +164,12 @@ $('#tblHomePolicy').on('click', '.reversePolicy', function (e) {
     }).then((result) => {
         if (result.isConfirmed) {
 
-            const policyCode = $(this).data('id');
+            const transCode = $(this).data('trans_id');
+            const policyCode = $(this).data('policy_id');
             $.ajax({
                 url: '/HomePolicy/ReversePolicy',
                 type: 'POST',
-                data: { policy_code: policyCode },
+                data: { policy_code: policyCode, trans_code: transCode },
                 success: function (res) {
                     if (res.action) {
 

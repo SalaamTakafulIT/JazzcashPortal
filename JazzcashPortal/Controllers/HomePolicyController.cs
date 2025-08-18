@@ -34,12 +34,12 @@ namespace JazzcashPortal.Controllers
         }
 
         [HttpPost]
-        public JsonResult ReversePolicy(string policy_code)
+        public async Task<JsonResult> ReversePolicy(string trans_code, string policy_code)
         {
             var dbar = new DbActionResult();
             try
             {
-                if (policy_code == null || policy_code == "")
+                if (string.IsNullOrEmpty(trans_code) || string.IsNullOrEmpty(policy_code))
                 {
                     return Json(new DbActionResult
                     {
@@ -48,12 +48,23 @@ namespace JazzcashPortal.Controllers
                     });
                 }
 
-                dbar = _BLLS.ReversePolicy(policy_code);
+                var obj = new Jazzcash
+                {
+                    TRANSACTION_ID = trans_code,
+                    REFERENCE_NO = "",
+                    X_CLIENT_ID = "",
+                    X_CLIENT_SECRET = "",
+                    X_PARTNER_ID = "",
+                    Secret_Key = "",
+                    IV = ""
+                };
+                // Call the BLL method to reverse the policy
+                dbar = await _BLLS.ReversePolicy(obj, policy_code);
                 return Json(dbar);
             }
             catch (Exception)
             {
-                dbar.ErrorMessage = "Error occurred while deleting record.";
+                dbar.ErrorMessage = "Error occurred while reversing the record.";
                 return Json(dbar);
             }
         }
