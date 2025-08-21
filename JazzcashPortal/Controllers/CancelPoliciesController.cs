@@ -14,7 +14,14 @@ namespace JazzcashPortal.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            var today = DateTime.Today;
+            var model = new HomePolicy
+            {
+                PERIOD_FROM = today.ToString("dd-MMM-yyyy"),
+                PERIOD_TO = today.ToString("dd-MMM-yyyy"),
+            };
+
+            return View(model);
         }
 
         [HttpGet]
@@ -30,6 +37,21 @@ namespace JazzcashPortal.Controllers
             catch (Exception)
             {
                 return Json(dt);
+            }
+        }
+
+        [HttpPost]
+        public JsonResult SearchCancelPolicy(HomePolicy model)
+        {
+            try
+            {
+                var dt = _BLLS.SearchCancelPolicy(model);
+                var list = DataTableHelper.ToDictionaryList(dt);
+                return Json(new { success = true, data = list });
+            }
+            catch (Exception)
+            {
+                return Json(new { success = false, error = "Error occurred while fetching policy details." });
             }
         }
     }

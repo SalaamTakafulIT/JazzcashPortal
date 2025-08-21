@@ -966,6 +966,8 @@ wwwroot\assets\video\travel.mp4
 wwwroot\assets\video\travel.png
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\js\active-policy.js
+wwwroot\js\cancel-policy.js
 wwwroot\js\home-policy.js
 wwwroot\js\jazzcash-report.js
 wwwroot\js\product-configuration.js
@@ -1976,5 +1978,4 @@ wwwroot\vendors\swiper\swiper-bundle.min.css
 wwwroot\vendors\swiper\swiper-bundle.min.js
 wwwroot\vendors\tinymce\tinymce.min.js
 wwwroot\vendors\typed.js\typed.umd.js
-wwwroot\js\active-policy.js
-wwwroot\js\cancel-policy.js
+wwwroot\js\dashboard.js

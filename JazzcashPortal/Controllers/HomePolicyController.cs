@@ -13,7 +13,7 @@ namespace JazzcashPortal.Controllers
         public HomePolicyController(HomePolicyService BLLS, IConfiguration config)
         {
             _BLLS = BLLS;
-            _config = config ?? throw new ArgumentNullException(nameof(config));
+            _config = config;
         }
         public IActionResult Index()
         {
@@ -58,11 +58,11 @@ namespace JazzcashPortal.Controllers
                     });
                 }
 
-                string? x_client_id = _config["MySettings:X_CLIENT_ID"];
-                string? x_client_secret = _config["MySettings:X_CLIENT_SECRET"];
-                string? x_partner_id = _config["MySettings:X_PARTNER_ID"];
-                string? secret_key = _config["MySettings:Secret_Key"];
-                string? iv = _config["MySettings:IV"];
+                string? x_client_id = _config["ConnectionStrings:X_CLIENT_ID"];
+                string? x_client_secret = _config["ConnectionStrings:X_CLIENT_SECRET"];
+                string? x_partner_id = _config["ConnectionStrings:X_PARTNER_ID"];
+                string? secret_key = _config["ConnectionStrings:Secret_Key"];
+                string? iv = _config["ConnectionStrings:IV"];
 
                 try
                 {
@@ -78,14 +78,13 @@ namespace JazzcashPortal.Controllers
                 }
                 catch (ConfigurationErrorsException ex)
                 {
-
-                    throw;
+                    dbar.ErrorMessage = ex.Message;
+                    return Json(dbar);
                 }
 
                 var obj = new Jazzcash
                 {
                     TRANSACTION_ID = trans_code,
-                    REFERENCE_NO = "",
                     X_CLIENT_ID = x_client_id,
                     X_CLIENT_SECRET = x_client_secret,
                     X_PARTNER_ID = x_partner_id,

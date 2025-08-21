@@ -30,10 +30,9 @@ namespace JazzcashPortal.BLL
 
         public async Task<DbActionResult> ReversePolicy(Jazzcash m, string policy_code)
         {
-            bool output = false;
             var dbar = new DbActionResult();
             var result = await JazzcashResultAPI(m);
-            //bool output = _dal.ReversePolicy(policy_code);
+            bool output = _dal.ReversePolicy(policy_code);
             if (output)
             {
                 dbar.Action = true;
@@ -182,11 +181,21 @@ namespace JazzcashPortal.BLL
             return _dal.GetActivePolicies();
         }
 
+        public DataTable SearchActivePolicy(HomePolicy mdl)
+        {
+            return _dal.SearchActivePolicy(mdl);
+        }
+
 
         //**************************************** CancelPoliciesService ****************************************
         public DataTable GetCancelPolicies()
         {
             return _dal.GetCancelPolicies();
+        }
+
+        public DataTable SearchCancelPolicy(HomePolicy mdl)
+        {
+            return _dal.SearchCancelPolicy(mdl);
         }
     }
 }

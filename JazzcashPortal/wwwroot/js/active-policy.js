@@ -140,3 +140,36 @@ function LoadActivePolicies(data) {
         ]
     });
 }
+
+$('#btnSearch_AP').on('click', function () {
+    SearchActivePolicy();
+});
+
+function SearchActivePolicy() {
+
+    var model = $('#ActivePolicyForm').serialize();
+
+    $.ajax({
+        url: '/ActivePolicies/SearchActivePolicy',
+        type: 'POST',
+        data: model,
+        success: function (res) {
+            if (res.success) {
+                var data = res.data;
+                LoadActivePolicies(data);
+            }
+            else {
+                ErrorNotify(res.error);
+            }
+        },
+        error: function () {
+
+        },
+        beforeSend: function () {
+            $('#loading').show();
+        },
+        complete: function () {
+            $('#loading').hide();
+        },
+    });
+}

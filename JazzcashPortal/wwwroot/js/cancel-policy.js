@@ -140,3 +140,36 @@ function LoadCancelPolicies(data) {
         ]
     });
 }
+
+$('#btnSearch_CP').on('click', function () {
+    SearchCancelPolicy();
+});
+
+function SearchCancelPolicy() {
+
+    var model = $('#CancelPolicyForm').serialize();
+
+    $.ajax({
+        url: '/CancelPolicies/SearchCancelPolicy',
+        type: 'POST',
+        data: model,
+        success: function (res) {
+            if (res.success) {
+                var data = res.data;
+                LoadCancelPolicies(data);
+            }
+            else {
+                ErrorNotify(res.error);
+            }
+        },
+        error: function () {
+
+        },
+        beforeSend: function () {
+            $('#loading').show();
+        },
+        complete: function () {
+            $('#loading').hide();
+        },
+    });
+}

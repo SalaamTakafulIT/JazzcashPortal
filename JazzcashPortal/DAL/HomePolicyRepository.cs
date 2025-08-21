@@ -93,6 +93,31 @@ namespace JazzcashPortal.DAL
             return dt;
         }
 
+        public DataTable SearchActivePolicy(HomePolicy mdl)
+        {
+            DataTable dt;
+            string query = "select func_assorted_string(a.policy_code) AssortedString, func_assorted_string(a.endorsement_code) Endorsement, a.* from ins_jazzcash_lead a where a.status='A'";
+
+            var parameters = new List<OracleParameter>();
+
+            if (!string.IsNullOrEmpty(mdl.PERIOD_FROM) && !string.IsNullOrEmpty(mdl.PERIOD_TO))
+            {
+                query += " AND TRUNC(a.ent_date) BETWEEN TO_DATE(:PeriodFrom, 'DD-MON-YYYY') AND TO_DATE(:PeriodTo, 'DD-MON-YYYY')";
+                parameters.Add(new OracleParameter("PeriodFrom", mdl.PERIOD_FROM));
+                parameters.Add(new OracleParameter("PeriodTo", mdl.PERIOD_TO));
+            }
+            if (!string.IsNullOrEmpty(mdl.ContactNo))
+            {
+                query += " AND phone_no = :ContactNo";
+                parameters.Add(new OracleParameter("ContactNo", mdl.ContactNo));
+            }
+            query += " AND func_assorted_string(a.policy_code) IS NOT NULL";
+            query += " order by ent_date desc";
+
+            dt = _dbHelper.ExecQueryReturnTable(query, CommandType.Text, parameters.ToArray());
+            return dt;
+        }
+
 
         //**************************************** Cancel Policies ****************************************
         public DataTable GetCancelPolicies()
@@ -100,6 +125,31 @@ namespace JazzcashPortal.DAL
             DataTable dt;
             string query = "select func_assorted_string(a.policy_code) AssortedString, func_assorted_string(a.endorsement_code) Endorsement, a.* from ins_jazzcash_lead a where a.status='R' order by ent_date desc";
             dt = _dbHelper.ExecQueryReturnTable(query, CommandType.Text);
+            return dt;
+        }
+
+        public DataTable SearchCancelPolicy(HomePolicy mdl)
+        {
+            DataTable dt;
+            string query = "select func_assorted_string(a.policy_code) AssortedString, func_assorted_string(a.endorsement_code) Endorsement, a.* from ins_jazzcash_lead a where a.status='R'";
+
+            var parameters = new List<OracleParameter>();
+
+            if (!string.IsNullOrEmpty(mdl.PERIOD_FROM) && !string.IsNullOrEmpty(mdl.PERIOD_TO))
+            {
+                query += " AND TRUNC(a.ent_date) BETWEEN TO_DATE(:PeriodFrom, 'DD-MON-YYYY') AND TO_DATE(:PeriodTo, 'DD-MON-YYYY')";
+                parameters.Add(new OracleParameter("PeriodFrom", mdl.PERIOD_FROM));
+                parameters.Add(new OracleParameter("PeriodTo", mdl.PERIOD_TO));
+            }
+            if (!string.IsNullOrEmpty(mdl.ContactNo))
+            {
+                query += " AND phone_no = :ContactNo";
+                parameters.Add(new OracleParameter("ContactNo", mdl.ContactNo));
+            }
+            query += " AND func_assorted_string(a.policy_code) IS NOT NULL";
+            query += " order by ent_date desc";
+
+            dt = _dbHelper.ExecQueryReturnTable(query, CommandType.Text, parameters.ToArray());
             return dt;
         }
     }
