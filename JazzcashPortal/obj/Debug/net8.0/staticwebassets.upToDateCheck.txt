@@ -1129,6 +1129,19 @@ wwwroot\vendors\chart\chart.umd.js
 wwwroot\vendors\choices\choices.min.css
 wwwroot\vendors\choices\choices.min.js
 wwwroot\vendors\countup\countUp.umd.js
+wwwroot\vendors\datatables.net-responsive-bs\.bower.json
+wwwroot\vendors\datatables.net-responsive-bs\bower.json
+wwwroot\vendors\datatables.net-responsive-bs\css\responsive.bootstrap.css
+wwwroot\vendors\datatables.net-responsive-bs\css\responsive.bootstrap.min.css
+wwwroot\vendors\datatables.net-responsive-bs\js\responsive.bootstrap.js
+wwwroot\vendors\datatables.net-responsive-bs\LICENSE.txt
+wwwroot\vendors\datatables.net-responsive-bs\README.md
+wwwroot\vendors\datatables.net-responsive\.bower.json
+wwwroot\vendors\datatables.net-responsive\bower.json
+wwwroot\vendors\datatables.net-responsive\js\dataTables.responsive.js
+wwwroot\vendors\datatables.net-responsive\js\dataTables.responsive.min.js
+wwwroot\vendors\datatables.net-responsive\LICENSE.txt
+wwwroot\vendors\datatables.net-responsive\README.md
 wwwroot\vendors\dayjs\dayjs.min.js
 wwwroot\vendors\dhtmlx-gantt\dhtmlxgantt.css
 wwwroot\vendors\dhtmlx-gantt\dhtmlxgantt.js
@@ -1963,3 +1976,5 @@ wwwroot\vendors\swiper\swiper-bundle.min.css
 wwwroot\vendors\swiper\swiper-bundle.min.js
 wwwroot\vendors\tinymce\tinymce.min.js
 wwwroot\vendors\typed.js\typed.umd.js
+wwwroot\js\active-policy.js
+wwwroot\js\cancel-policy.js

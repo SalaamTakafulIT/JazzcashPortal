@@ -1,0 +1,33 @@
+﻿@{
+    Layout = "_Layout";
+}
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+<div class="right_col" role="main">
+    <div class="col-md-12 col-sm-12">
+        <div class="bg-white p-3">
+
+            <div class="d-flex justify-content-between align-items-center mb-3" style="padding: 5px;">
+                <h2 style="color: #3b5167;"><small>Cancel Policies</small></h2>
+            </div>
+
+            <!-- Table section (always visible) -->
+            <div class="card-box table-responsive">
+                <table id="tblCancelPolicy" class="table table-striped table-bordered dt-responsive" cellspacing="0" width="100%" style="text-align: center;">
+                    <thead style="background-color: #3b5167; color: #fff;">
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="~/js/cancel-policy.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        GetCancelPolicies();
+    });
+</script>

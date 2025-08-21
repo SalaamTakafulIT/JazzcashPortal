@@ -3,32 +3,24 @@
   "WorkspaceRootPath": "D:\\Git Project\\JazzcashPortal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{98331A6F-6A84-4051-868E-5F95CD1E7586}|JazzcashPortal\\JazzcashPortal.csproj|d:\\git project\\jazzcashportal\\jazzcashportal\\wwwroot\\js\\home-policy.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{98331A6F-6A84-4051-868E-5F95CD1E7586}|JazzcashPortal\\JazzcashPortal.csproj|solutionrelative:jazzcashportal\\wwwroot\\js\\home-policy.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{98331A6F-6A84-4051-868E-5F95CD1E7586}|JazzcashPortal\\JazzcashPortal.csproj|d:\\git project\\jazzcashportal\\jazzcashportal\\controllers\\homepolicycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98331A6F-6A84-4051-868E-5F95CD1E7586}|JazzcashPortal\\JazzcashPortal.csproj|solutionrelative:jazzcashportal\\controllers\\homepolicycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98331A6F-6A84-4051-868E-5F95CD1E7586}|JazzcashPortal\\JazzcashPortal.csproj|d:\\git project\\jazzcashportal\\jazzcashportal\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{98331A6F-6A84-4051-868E-5F95CD1E7586}|JazzcashPortal\\JazzcashPortal.csproj|solutionrelative:jazzcashportal\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{98331A6F-6A84-4051-868E-5F95CD1E7586}|JazzcashPortal\\JazzcashPortal.csproj|d:\\git project\\jazzcashportal\\jazzcashportal\\bll\\homepolicyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98331A6F-6A84-4051-868E-5F95CD1E7586}|JazzcashPortal\\JazzcashPortal.csproj|solutionrelative:jazzcashportal\\bll\\homepolicyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98331A6F-6A84-4051-868E-5F95CD1E7586}|JazzcashPortal\\JazzcashPortal.csproj|d:\\git project\\jazzcashportal\\jazzcashportal\\dal\\homepolicyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98331A6F-6A84-4051-868E-5F95CD1E7586}|JazzcashPortal\\JazzcashPortal.csproj|solutionrelative:jazzcashportal\\dal\\homepolicyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98331A6F-6A84-4051-868E-5F95CD1E7586}|JazzcashPortal\\JazzcashPortal.csproj|d:\\git project\\jazzcashportal\\jazzcashportal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98331A6F-6A84-4051-868E-5F95CD1E7586}|JazzcashPortal\\JazzcashPortal.csproj|solutionrelative:jazzcashportal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{98331A6F-6A84-4051-868E-5F95CD1E7586}|JazzcashPortal\\JazzcashPortal.csproj|d:\\git project\\jazzcashportal\\jazzcashportal\\views\\homepolicy\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{98331A6F-6A84-4051-868E-5F95CD1E7586}|JazzcashPortal\\JazzcashPortal.csproj|solutionrelative:jazzcashportal\\views\\homepolicy\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98331A6F-6A84-4051-868E-5F95CD1E7586}|JazzcashPortal\\JazzcashPortal.csproj|d:\\git project\\jazzcashportal\\jazzcashportal\\models\\jazzcash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98331A6F-6A84-4051-868E-5F95CD1E7586}|JazzcashPortal\\JazzcashPortal.csproj|solutionrelative:jazzcashportal\\models\\jazzcash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{98331A6F-6A84-4051-868E-5F95CD1E7586}|JazzcashPortal\\JazzcashPortal.csproj|d:\\git project\\jazzcashportal\\jazzcashportal\\dal\\homepolicyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98331A6F-6A84-4051-868E-5F95CD1E7586}|JazzcashPortal\\JazzcashPortal.csproj|solutionrelative:jazzcashportal\\dal\\homepolicyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,68 +30,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\Program.cs",
-              "RelativeDocumentMoniker": "JazzcashPortal\\Program.cs",
-              "ToolTip": "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\Program.cs",
-              "RelativeToolTip": "JazzcashPortal\\Program.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAowDAAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T05:07:14.187Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Jazzcash.cs",
-              "DocumentMoniker": "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\Models\\Jazzcash.cs",
-              "RelativeDocumentMoniker": "JazzcashPortal\\Models\\Jazzcash.cs",
-              "ToolTip": "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\Models\\Jazzcash.cs",
-              "RelativeToolTip": "JazzcashPortal\\Models\\Jazzcash.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T07:46:45.007Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "home-policy.js",
-              "DocumentMoniker": "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\wwwroot\\js\\home-policy.js",
-              "RelativeDocumentMoniker": "JazzcashPortal\\wwwroot\\js\\home-policy.js",
-              "ToolTip": "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\wwwroot\\js\\home-policy.js",
-              "RelativeToolTip": "JazzcashPortal\\wwwroot\\js\\home-policy.js",
-              "ViewState": "AgIAAKAAAAAAAAAAAAAowLMAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-08-13T12:15:32.021Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\Views\\HomePolicy\\Index.cshtml",
-              "RelativeDocumentMoniker": "JazzcashPortal\\Views\\HomePolicy\\Index.cshtml",
-              "ToolTip": "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\Views\\HomePolicy\\Index.cshtml",
-              "RelativeToolTip": "JazzcashPortal\\Views\\HomePolicy\\Index.cshtml",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-18T05:01:16.681Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "HomePolicyController.cs",
-              "DocumentMoniker": "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\Controllers\\HomePolicyController.cs",
-              "RelativeDocumentMoniker": "JazzcashPortal\\Controllers\\HomePolicyController.cs",
-              "ToolTip": "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\Controllers\\HomePolicyController.cs",
-              "RelativeToolTip": "JazzcashPortal\\Controllers\\HomePolicyController.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAD4vy0AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-13T12:09:36.956Z"
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\appsettings.json",
+              "RelativeDocumentMoniker": "JazzcashPortal\\appsettings.json",
+              "ToolTip": "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\appsettings.json",
+              "RelativeToolTip": "JazzcashPortal\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-21T06:23:51.076Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -109,21 +53,49 @@
               "RelativeDocumentMoniker": "JazzcashPortal\\BLL\\HomePolicyService.cs",
               "ToolTip": "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\BLL\\HomePolicyService.cs",
               "RelativeToolTip": "JazzcashPortal\\BLL\\HomePolicyService.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAYwB0AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAYwCUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T04:53:46.64Z"
+              "WhenOpened": "2025-08-19T07:52:21.66Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "HomePolicyRepository.cs",
               "DocumentMoniker": "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\DAL\\HomePolicyRepository.cs",
               "RelativeDocumentMoniker": "JazzcashPortal\\DAL\\HomePolicyRepository.cs",
               "ToolTip": "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\DAL\\HomePolicyRepository.cs",
               "RelativeToolTip": "JazzcashPortal\\DAL\\HomePolicyRepository.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAgwBMAAADCAAAAAAAAAA==",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAuwFYAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-13T12:23:00.15Z"
+              "WhenOpened": "2025-08-19T07:45:51.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\Views\\HomePolicy\\Index.cshtml",
+              "RelativeDocumentMoniker": "JazzcashPortal\\Views\\HomePolicy\\Index.cshtml",
+              "ToolTip": "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\Views\\HomePolicy\\Index.cshtml",
+              "RelativeToolTip": "JazzcashPortal\\Views\\HomePolicy\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-21T06:11:17.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomePolicyController.cs",
+              "DocumentMoniker": "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\Controllers\\HomePolicyController.cs",
+              "RelativeDocumentMoniker": "JazzcashPortal\\Controllers\\HomePolicyController.cs",
+              "ToolTip": "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\Controllers\\HomePolicyController.cs",
+              "RelativeToolTip": "JazzcashPortal\\Controllers\\HomePolicyController.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAkwEYAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T06:11:13.151Z",
+              "EditorCaption": ""
             }
           ]
         }

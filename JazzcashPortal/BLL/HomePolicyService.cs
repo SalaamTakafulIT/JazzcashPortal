@@ -23,6 +23,11 @@ namespace JazzcashPortal.BLL
             return _dal.GetLeads();
         }
 
+        public DataTable SearchHomePolicy(HomePolicy mdl)
+        {
+            return _dal.SearchHomePolicy(mdl);
+        }
+
         public async Task<DbActionResult> ReversePolicy(Jazzcash m, string policy_code)
         {
             bool output = false;
@@ -168,6 +173,20 @@ namespace JazzcashPortal.BLL
             for (int i = 0; i < NumberChars; i += 2)
                 bytes[i / 2] = Convert.ToByte(hex.Substring(i, 2), 16);
             return bytes;
+        }
+
+
+        //**************************************** ActivePoliciesService ****************************************
+        public DataTable GetActivePolicies()
+        {
+            return _dal.GetActivePolicies();
+        }
+
+
+        //**************************************** CancelPoliciesService ****************************************
+        public DataTable GetCancelPolicies()
+        {
+            return _dal.GetCancelPolicies();
         }
     }
 }

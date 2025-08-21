@@ -24,6 +24,14 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Git Project/JazzcashPortal/JazzcashPortal/Views/ActivePolicies/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWN0aXZlUG9saWNpZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Git Project/JazzcashPortal/JazzcashPortal/Views/CancelPolicies/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuY2VsUG9saWNpZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Git Project/JazzcashPortal/JazzcashPortal/Views/HomePolicy/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVBvbGljeVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

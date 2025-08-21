@@ -56,7 +56,15 @@ function LoadHomePolicy(data) {
                 title: 'Case Studies'
             }
         ],
+        "columnDefs": [
+            {
+                "data": null,
+                "defaultContent": "",
+                "targets": 0
+            }
+        ],
         columns: [
+            { "data": "" },
             {
                 data: "ASSORTEDSTRING", title: "Assorted String",
                 render: function (data, type, row) {
@@ -77,6 +85,12 @@ function LoadHomePolicy(data) {
             },
             {
                 data: "PHONE_NO", title: "Contact #",
+                render: function (data, type, row) {
+                    return formatCell(data);
+                }
+            },
+            {
+                data: "AMOUNT", title: "Amount",
                 render: function (data, type, row) {
                     return formatCell(data);
                 }
@@ -174,7 +188,7 @@ $('#tblHomePolicy').on('click', '.reversePolicy', function (e) {
                     if (res.action) {
 
                         SuccessNotify(res.message);
-                        GetHomePolicy();
+                        SearchHomePolicy();
                     }
                     else {
                         ErrorNotify(res.errorMessage);
@@ -193,3 +207,36 @@ $('#tblHomePolicy').on('click', '.reversePolicy', function (e) {
         }
     });
 });
+
+$('#btnSearch_HP').on('click', function () {
+    SearchHomePolicy();
+});
+
+function SearchHomePolicy() {
+
+    var model = $('#HomePolicyForm').serialize();
+
+    $.ajax({
+        url: '/HomePolicy/SearchHomePolicy',
+        type: 'POST',
+        data: model,
+        success: function (res) {
+            if (res.success) {
+                var data = res.data;
+                LoadHomePolicy(data);
+            }
+            else {
+                ErrorNotify(res.error);
+            }
+        },
+        error: function () {
+
+        },
+        beforeSend: function () {
+            $('#loading').show();
+        },
+        complete: function () {
+            $('#loading').hide();
+        },
+    });
+}
