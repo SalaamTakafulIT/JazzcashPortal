@@ -8,20 +8,20 @@ function GetDashboardData() {
         success: function (data) {
 
             if (data.length > 0) {
-                $('#ddlYTDActiveSale').text(data[0].YTD_ACTIVE_SALE);
-                $('#ddlYTDActivePremium').text(data[0].YTD_ACTIVE_PREMIUM);
-                $('#ddlYTDRefundSale').text(data[0].YTD_REFUND_SALE);
-                $('#ddlYTDRefundPremium').text(data[0].YTD_REFUND_PREMIUM);
+                $('#ddlYTDActiveSale').text(Number(data[0].YTD_ACTIVE_SALE).toLocaleString());
+                $('#ddlYTDActivePremium').text(Number(data[0].YTD_ACTIVE_PREMIUM).toLocaleString());
+                $('#ddlYTDRefundSale').text(Number(data[0].YTD_REFUND_SALE).toLocaleString());
+                $('#ddlYTDRefundPremium').text(Number(data[0].YTD_REFUND_PREMIUM).toLocaleString());
 
-                $('#ddlMTDActiveSale').text(data[0].MTD_ACTIVE_SALE);
-                $('#ddlMTDActivePremium').text(data[0].MTD_ACTIVE_PREMIUM);
-                $('#ddlMTDRefundSale').text(data[0].MTD_REFUND_SALE);
-                $('#ddlMTDRefundPremium').text(data[0].MTD_REFUND_PREMIUM);
+                $('#ddlMTDActiveSale').text(Number(data[0].MTD_ACTIVE_SALE).toLocaleString());
+                $('#ddlMTDActivePremium').text(Number(data[0].MTD_ACTIVE_PREMIUM).toLocaleString());
+                $('#ddlMTDRefundSale').text(Number(data[0].MTD_REFUND_SALE).toLocaleString());
+                $('#ddlMTDRefundPremium').text(Number(data[0].MTD_REFUND_PREMIUM).toLocaleString());
 
-                $('#ddlTODAYActiveSale').text(data[0].TODAY_ACTIVE_SALE);
-                $('#ddlTODAYActivePremium').text(data[0].TODAY_ACTIVE_PREMIUM);
-                $('#ddlTODAYRefundSale').text(data[0].TODAY_REFUND_SALE);
-                $('#ddlTODAYRefundPremium').text(data[0].TODAY_REFUND_PREMIUM);
+                $('#ddlTODAYActiveSale').text(Number(data[0].TODAY_ACTIVE_SALE).toLocaleString());
+                $('#ddlTODAYActivePremium').text(Number(data[0].TODAY_ACTIVE_PREMIUM).toLocaleString());
+                $('#ddlTODAYRefundSale').text(Number(data[0].TODAY_REFUND_SALE).toLocaleString());
+                $('#ddlTODAYRefundPremium').text(Number(data[0].TODAY_REFUND_PREMIUM).toLocaleString());
             }
             FillChart_ActiveSale(data);
             FillChart_ActivePremium(data);

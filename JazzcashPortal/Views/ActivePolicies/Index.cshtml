@@ -17,21 +17,37 @@
             <form id="ActivePolicyForm">
                 <!-- Filter Section -->
                 <div class="row mb-3">
-                    <div class="col-md-3">
-                        <span asp-validation-for="PERIOD_FROM" class="text-danger"></span>
-                        <input type="text" asp-for="PERIOD_FROM" class="form-control date-picker" />
+                    
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <label>Period From:</label>
+                        <div class="form-group">
+                            <span asp-validation-for="PERIOD_FROM" class="text-danger"></span>
+                            <input type="text" asp-for="PERIOD_FROM" class="form-control date-picker" />
+                        </div>
                     </div>
-                    <div class="col-md-3">
-                        <span asp-validation-for="PERIOD_TO" class="text-danger"></span>
-                        <input type="text" asp-for="PERIOD_TO" class="form-control date-picker" />
+
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <label>Period To:</label>
+                        <div class="form-group">
+                            <span asp-validation-for="PERIOD_TO" class="text-danger"></span>
+                            <input type="text" asp-for="PERIOD_TO" class="form-control date-picker" />
+                        </div>
                     </div>
-                    <div class="col-md-3">
-                        <input type="text" asp-for="ContactNo" class="form-control" placeholder="Contact No" oninput="this.value = this.value.replace(/\D/g,'')" maxlength="15" />
+
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <label>Contact No:</label>
+                        <div class="form-group">
+                            <input type="text" asp-for="ContactNo" class="form-control" placeholder="Contact No" oninput="this.value = this.value.replace(/\D/g,'')" maxlength="15" />
+                        </div>
                     </div>
-                    <div class="col-md-3">
-                        <button type="button" id="btnSearch_AP" class="btn btn-primary">
-                            <i class="fas fa-search"></i> Search
-                        </button>
+
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <br />
+                        <div class="form-group">
+                            <button type="button" id="btnSearch_AP" class="btn btn-primary">
+                                <i class="fas fa-search"></i> Search
+                            </button>
+                        </div>
                     </div>
                 </div>
             </form>
@@ -60,6 +76,6 @@
 
     $(document).ready(function () {
         setDates();
-        LoadActivePolicies([]);
+        SearchActivePolicy();
     });
 </script>

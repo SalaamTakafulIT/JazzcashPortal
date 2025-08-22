@@ -14,7 +14,7 @@ namespace JazzcashPortal.Controllers
         }
 
         public IActionResult Index()
-        {
+        {   
             return View();
         }
 

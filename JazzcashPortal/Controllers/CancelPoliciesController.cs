@@ -15,9 +15,10 @@ namespace JazzcashPortal.Controllers
         public IActionResult Index()
         {
             var today = DateTime.Today;
+            var firstDateOfMonth = new DateTime(today.Year, today.Month, 1);
             var model = new HomePolicy
             {
-                PERIOD_FROM = today.ToString("dd-MMM-yyyy"),
+                PERIOD_FROM = firstDateOfMonth.ToString("dd-MMM-yyyy"),
                 PERIOD_TO = today.ToString("dd-MMM-yyyy"),
             };
 
