@@ -22,7 +22,7 @@ namespace JazzcashPortal.Controllers
         public IActionResult GetDashboardData()
         {
             DataTable dt = new DataTable();
-            try
+            try 
             {
                 dt = _BLLS.GetDashboardData();
                 var list = DataTableHelper.ToDictionaryList(dt);

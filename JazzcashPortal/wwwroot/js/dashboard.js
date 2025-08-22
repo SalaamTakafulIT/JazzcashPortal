@@ -89,7 +89,7 @@ function FillChart_ActivePremium(d) {
         },
         axisY: {
             includeZero: true,
-            title: "No. of Sales"
+            title: "Total Sales"
         },
         data: [{
             type: "column",
@@ -123,7 +123,7 @@ function FillChart_RefundSale(d) {
         },
         axisY: {
             includeZero: true,
-            title: "No. of Sales"
+            title: "No. of Refund"
         },
         data: [{
             type: "column",
@@ -157,7 +157,7 @@ function FillChart_RefundPremium(d) {
         },
         axisY: {
             includeZero: true,
-            title: "No. of Sales"
+            title: "Total Refund"
         },
         data: [{
             type: "column",
