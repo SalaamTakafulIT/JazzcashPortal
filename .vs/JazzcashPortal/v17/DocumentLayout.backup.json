@@ -46,8 +46,7 @@
               "RelativeToolTip": "JazzcashPortal\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAADDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-22T05:03:32.299Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-22T05:03:32.299Z"
             },
             {
               "$type": "Document",
@@ -83,8 +82,7 @@
               "RelativeToolTip": "JazzcashPortal\\wwwroot\\js\\dashboard.js",
               "ViewState": "AgIAAE0AAAAAAAAAAAAAwFMAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-08-21T07:38:33.062Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T07:38:33.062Z"
             },
             {
               "$type": "Document",
@@ -94,7 +92,7 @@
               "RelativeDocumentMoniker": "JazzcashPortal\\Views\\Dashboard\\Index.cshtml",
               "ToolTip": "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\Views\\Dashboard\\Index.cshtml",
               "RelativeToolTip": "JazzcashPortal\\Views\\Dashboard\\Index.cshtml",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAAAGcAAABoAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAGgAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-08-21T07:36:28.14Z",
               "EditorCaption": ""
@@ -109,8 +107,7 @@
               "RelativeToolTip": "JazzcashPortal\\Controllers\\DashboardController.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwBoAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T07:31:53.079Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T07:31:53.079Z"
             }
           ]
         }
