@@ -835,3 +835,4 @@ D:\Git Project\JazzcashPortal\JazzcashPortal\obj\Debug\net8.0\refint\JazzcashPor
 D:\Git Project\JazzcashPortal\JazzcashPortal\obj\Debug\net8.0\JazzcashPortal.pdb
 D:\Git Project\JazzcashPortal\JazzcashPortal\obj\Debug\net8.0\JazzcashPortal.genruntimeconfig.cache
 D:\Git Project\JazzcashPortal\JazzcashPortal\obj\Debug\net8.0\ref\JazzcashPortal.dll
+D:\Git Project\JazzcashPortal\JazzcashPortal\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
