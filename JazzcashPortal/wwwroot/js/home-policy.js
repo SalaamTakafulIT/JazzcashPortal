@@ -208,8 +208,19 @@ $('#tblHomePolicy').on('click', '.reversePolicy', function (e) {
     });
 });
 
-$('#btnSearch_HP').on('click', function () {
-    SearchHomePolicy();
+//$('#btnSearch_HP').on('click', function (e) {
+//    e.preventDefault();
+//    SearchHomePolicy();
+//});
+
+$('#btnSearch_HP').on('click', function (e) {
+    const form = document.getElementById('HomePolicyForm');
+    if (form.checkValidity()) {
+        e.preventDefault();
+        SearchHomePolicy();
+    } else {
+        form.reportValidity();
+    }
 });
 
 function SearchHomePolicy() {
