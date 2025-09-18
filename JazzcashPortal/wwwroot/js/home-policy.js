@@ -64,7 +64,7 @@ function LoadHomePolicy(data) {
             }
         ],
         columns: [
-            { "data": "" },
+            /*{ "data": "" },*/
             {
                 data: "ASSORTEDSTRING", title: "Assorted String",
                 render: function (data, type, row) {
@@ -147,10 +147,10 @@ function LoadHomePolicy(data) {
                 render: function (data, type, row, meta) {
                     if (type === 'display') {
                         if (row["ENDORSEMENT_CODE"] == "" || row["ENDORSEMENT_CODE"] == null) {
-                            return `<button type="button" class="btn btn-danger reversePolicy" data-trans_id="${data}" data-policy_id="${data}"><i class="fa fa-undo"></i> Reverse</button>`;
+                            return `<button type="button" class="btn btn-danger reversePolicy" data-trans_id="${data}" data-policy_id="${row["POLICY_CODE"]}"><i class="fa fa-undo"></i> Refund</button>`;
                         }
                         else {
-                            return `<button type="button" class="btn btn-danger reversePolicy" data-id="${data}" disabled><i class="fa fa-undo"></i> Reverse</button>`;
+                            return `<button type="button" class="btn btn-danger reversePolicy" data-id="${data}" disabled><i class="fa fa-undo"></i> Refund</button>`;
                         }
                     }
                     return data;
@@ -168,7 +168,7 @@ $('#tblHomePolicy').on('click', '.reversePolicy', function (e) {
         text: "This record will be Reversed.",
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonText: 'Yes, reverse it!',
+        confirmButtonText: 'Yes, refund it!',
         cancelButtonText: 'Cancel',
         reverseButtons: true,
         customClass: {

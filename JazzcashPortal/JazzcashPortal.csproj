@@ -16,4 +16,12 @@
     <PackageReference Include="Scrutor.AspNetCore" Version="3.3.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\loading.gif" />
+  </ItemGroup>
+
 </Project>

@@ -152,9 +152,13 @@
                         hideLoader();
                         if (response && response.status === "Success") {
                             SuccessNotify(response.message);
-                            setTimeout(function () {
+
+                            if (response.role == "ADMIN"){
                                 window.location.href = '../Dashboard/Index';
-                            }, 1000);
+                            }
+                            else {
+                                window.location.href = '../HomePolicy/Index';
+                            }
                         } else {
                             ErrorNotify(response.message);
                         }

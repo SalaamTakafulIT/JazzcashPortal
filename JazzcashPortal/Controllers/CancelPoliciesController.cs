@@ -1,10 +1,12 @@
 ﻿using JazzcashPortal.BLL;
 using JazzcashPortal.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
 
 namespace JazzcashPortal.Controllers
 {
+    [Authorize(Roles = "ADMIN")]
     public class CancelPoliciesController : Controller
     {
         private readonly HomePolicyService _BLLS;

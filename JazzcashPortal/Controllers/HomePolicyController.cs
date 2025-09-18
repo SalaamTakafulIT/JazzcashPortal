@@ -1,11 +1,13 @@
 ﻿using JazzcashPortal.BLL;
 using JazzcashPortal.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Configuration;
 using System.Data;
 
 namespace JazzcashPortal.Controllers
 {
+    [Authorize(Roles = "AGENT,ADMIN")]
     public class HomePolicyController : Controller
     {
         private readonly IConfiguration _config;
@@ -58,6 +60,7 @@ namespace JazzcashPortal.Controllers
                     });
                 }
 
+                string? x_url = _config["ConnectionStrings:X_URL"];
                 string? x_client_id = _config["ConnectionStrings:X_CLIENT_ID"];
                 string? x_client_secret = _config["ConnectionStrings:X_CLIENT_SECRET"];
                 string? x_partner_id = _config["ConnectionStrings:X_PARTNER_ID"];
@@ -68,6 +71,7 @@ namespace JazzcashPortal.Controllers
                 {
                     // Validate once at startup
                     if (string.IsNullOrWhiteSpace(x_client_id) ||
+                        string.IsNullOrWhiteSpace(x_url) ||
                         string.IsNullOrWhiteSpace(x_client_secret) ||
                         string.IsNullOrWhiteSpace(x_partner_id) ||
                         string.IsNullOrWhiteSpace(secret_key) ||
@@ -84,6 +88,7 @@ namespace JazzcashPortal.Controllers
 
                 var obj = new Jazzcash
                 {
+                    X_URL = x_url,
                     TRANSACTION_ID = trans_code,
                     X_CLIENT_ID = x_client_id,
                     X_CLIENT_SECRET = x_client_secret,

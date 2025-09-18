@@ -32,11 +32,17 @@ namespace JazzcashPortal.BLL
         {
             var dbar = new DbActionResult();
             var result = await JazzcashResultAPI(m);
+            SubApiResponse res = JsonConvert.DeserializeObject<SubApiResponse>(result.message);
+            if (res.resultCode != "0")
+            {
+                dbar.ErrorMessage = res.failedReason;
+                return dbar;
+            }
             bool output = _dal.ReversePolicy(policy_code);
             if (output)
             {
                 dbar.Action = true;
-                dbar.Message = "Revered Successfully.";
+                dbar.Message = "Refund Successfully.";
             }
             else
             {
@@ -51,10 +57,12 @@ namespace JazzcashPortal.BLL
             string secretKey = m.Secret_Key ?? "";
             string decryptedResponse = "";
             var obj = new JazzcashResult();
+            Random rnd = new Random();
+            int randomNumber = rnd.Next(10000000, 100000000);
 
             string inputpara = $@"{{
   ""originalTransactionId"": ""{m.TRANSACTION_ID}"",
-  ""referenceId"": ""dsdsds"",
+  ""referenceId"": ""{randomNumber}"",
   ""POSID"": ""POSID1""
 }}
 ";
@@ -67,7 +75,8 @@ namespace JazzcashPortal.BLL
             };
             var jsonContent = new StringContent(JsonConvert.SerializeObject(postData), Encoding.UTF8, "application/json");
 
-            string apiUrl = "https://gateway-sandbox.jazzcash.com.pk/jazzcash/third-party-integration/rest/api/wso2/v1/insurance/unsub";
+            //string apiUrl = "https://gateway-sandbox.jazzcash.com.pk/jazzcash/third-party-integration/rest/api/wso2/v1/insurance/unsub";
+            string apiUrl = m.X_URL + "/jazzcash/third-party-integration/rest/api/wso2/v1/insurance/unsub";
             using (var client = new HttpClient())
             {
                 // Add required headers
