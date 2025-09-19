@@ -1,0 +1,81 @@
+﻿@model JazzcashPortal.Models.HomePolicy
+@{
+    Layout = "_Layout";
+}
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+<div class="right_col" role="main">
+    <div class="col-md-12 col-sm-12">
+        <div class="bg-white p-3">
+
+            <div class="d-flex justify-content-between align-items-center mb-3" style="padding: 5px;">
+                <h2 style="color: #3b5167;"><small>Active Policies</small></h2>
+            </div>
+
+            <form id="ActivePolicyForm">
+                <!-- Filter Section -->
+                <div class="row mb-3">
+                    
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <label>Period From:</label>
+                        <div class="form-group">
+                            <span asp-validation-for="PERIOD_FROM" class="text-danger"></span>
+                            <input type="text" asp-for="PERIOD_FROM" class="form-control date-picker" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <label>Period To:</label>
+                        <div class="form-group">
+                            <span asp-validation-for="PERIOD_TO" class="text-danger"></span>
+                            <input type="text" asp-for="PERIOD_TO" class="form-control date-picker" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <label>Contact No:</label>
+                        <div class="form-group">
+                            <input type="text" asp-for="ContactNo" class="form-control" placeholder="Contact No" oninput="this.value = this.value.replace(/\D/g,'')" maxlength="15" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <br />
+                        <div class="form-group">
+                            <button type="button" id="btnSearch_AP" class="btn btn-primary">
+                                <i class="fas fa-search"></i> Search
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Table section (always visible) -->
+            <div class="card-box table-responsive">
+                <table id="tblActivePolicy" class="table table-striped table-bordered dt-responsive" cellspacing="0" width="100%" style="text-align: center;">
+                    <thead style="background-color: #3b5167; color: #fff;">
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="~/js/active-policy.js"></script>
+<script type="text/javascript">
+
+    function setDates() {
+        flatpickr(".date-picker", {
+            dateFormat: "d-M-Y", // 23-Jun-2024
+            shorthandCurrentMonth: true
+        });
+    }
+
+    $(document).ready(function () {
+        setDates();
+        SearchActivePolicy();
+    });
+</script>

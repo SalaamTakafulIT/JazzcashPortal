@@ -1,4 +1,5 @@
-﻿using JazzcashPortal.Models;
+﻿using JazzcashPortal.BLL;
+using JazzcashPortal.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
@@ -13,9 +14,11 @@ namespace JazzcashPortal.Controllers
     public class AccountController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly AccountService _BLLS;
         private readonly IConfiguration _configuration;
-        public AccountController(AppDbContext context, IConfiguration configuration)
+        public AccountController(AccountService BLLS, AppDbContext context, IConfiguration configuration)
         {
+            _BLLS = BLLS;
             _context = context;
             _configuration = configuration;
         }
@@ -27,21 +30,23 @@ namespace JazzcashPortal.Controllers
 
         [AllowAnonymous]
         [HttpPost]
-        public async Task<IActionResult> LoginPost([FromBody] LoginViewModel model)
+        public async Task<IActionResult> LoginPost([FromBody] Account model)
         {
             DataTable dt = new DataTable();
             try
             {
-                int isAuthenticated = _context.TBL_USERS
-                    .Count(e => e.USER_CD == model.Username && e.USER_PASS == model.Password && e.ACTIVE == "Y");
+                dt = _BLLS.JazzcashValidate(model);
+                //int isAuthenticated = _context.TBL_USERS
+                //    .Count(e => e.USER_CD == model.Username && e.USER_PASS == model.Password && e.ACTIVE == "Y");
 
-                if (isAuthenticated == 1)
+                if (dt.Rows.Count > 0)
                 {
+                    string? role = dt.Rows[0]["JAZZCASH_USER_TYPE"].ToString();
                     //HttpContext.Session.SetString("UserId", dt.Rows[0]["USER_ID"].ToString() ?? "");
                     var claims = new List<Claim>
                     {
                         new Claim(ClaimTypes.Name, model.Username),
-                        //new Claim(ClaimTypes.Role, "Admin")
+                        new Claim(ClaimTypes.Role, role??"")
                     };
 
                     var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
@@ -52,7 +57,8 @@ namespace JazzcashPortal.Controllers
                     {
                         action = true,
                         status = "Success",
-                        message = "Login successful"
+                        message = "Login successful",
+                        Role = role,
                     });
                 }
                 else
@@ -64,7 +70,7 @@ namespace JazzcashPortal.Controllers
                         message = "Invalid username or password."
                     });
                 }
-                    
+
             }
             catch (Exception)
             {
@@ -83,10 +89,11 @@ namespace JazzcashPortal.Controllers
             return RedirectToAction("Login", "Account");
         }
 
-        public class LoginViewModel
-        {
-            public required string Username { get; set; }
-            public required string Password { get; set; }
-        }
+        //public class LoginViewModel
+        //{
+        //    public required string Username { get; set; }
+        //    public required string Password { get; set; }
+        //    public string? JAZZCASH_USER_TYPE { get; set; }
+        //}
     }
 }

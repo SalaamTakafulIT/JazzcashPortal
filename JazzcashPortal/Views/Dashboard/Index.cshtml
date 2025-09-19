@@ -1,0 +1,132 @@
+﻿@{
+    Layout = "_Layout";
+}
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+<body class="bg-light">
+    <div class="right_col" role="main">
+        <div class="col-md-12 col-sm-12">
+            <div class="bg-white p-3">
+
+                <div class="d-flex justify-content-between align-items-center mb-2" style="padding: 5px;">
+                    <h2 style="color: #3b5167;"><small>Dashboard</small></h2>
+                </div>
+
+                <div class="row g-4">
+                    <!-- YTD Card -->
+                    <div class="col-md-4">
+                        <div class="card shadow-lg border-0 rounded-4 h-100">
+                            <div class="card-header bg-primary text-white text-center fw-bold rounded-top-4 p-3">
+                                YTD (Year to Date)
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="fw-semibold">Active Sale</span>
+                                    <span class="text-success" id="ddlYTDActiveSale">0</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="fw-semibold">Active Premium</span>
+                                    <span class="text-success" id="ddlYTDActivePremium">0</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="fw-semibold">Refund Sale</span>
+                                    <span class="text-danger" id="ddlYTDRefundSale">0</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span class="fw-semibold">Refund Premium</span>
+                                    <span class="text-danger" id="ddlYTDRefundPremium">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MTD Card -->
+                    <div class="col-md-4">
+                        <div class="card shadow-lg border-0 rounded-4 h-100">
+                            <div class="card-header bg-warning text-dark text-center fw-bold rounded-top-4 p-3">
+                                MTD (Month to Date)
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="fw-semibold">Active Sale</span>
+                                    <span class="text-success" id="ddlMTDActiveSale">0</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="fw-semibold">Active Premium</span>
+                                    <span class="text-success" id="ddlMTDActivePremium">0</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="fw-semibold">Refund Sale</span>
+                                    <span class="text-danger" id="ddlMTDRefundSale">0</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span class="fw-semibold">Refund Premium</span>
+                                    <span class="text-danger" id="ddlMTDRefundPremium">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TODAY Card -->
+                    <div class="col-md-4">
+                        <div class="card shadow-lg border-0 rounded-4 h-100">
+                            <div class="card-header bg-success text-white text-center fw-bold rounded-top-4 p-3">
+                                TODAY
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="fw-semibold">Active Sale</span>
+                                    <span class="text-success" id="ddlTODAYActiveSale">0</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="fw-semibold">Active Premium</span>
+                                    <span class="text-success" id="ddlTODAYActivePremium">0</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="fw-semibold">Refund Sale</span>
+                                    <span class="text-danger" id="ddlTODAYRefundSale">0</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span class="fw-semibold">Refund Premium</span>
+                                    <span class="text-danger" id="ddlTODAYRefundPremium">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div id="chartContainerActiveSale" style="height: 370px; width: 100%;"></div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div id="chartContainerActivePremium" style="height: 370px; width: 100%;"></div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div id="chartContainerRefundSale" style="height: 370px; width: 100%;"></div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div id="chartContainerRefundPremium" style="height: 370px; width: 100%;"></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+<script src="~/js/dashboard.js"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+    
+        GetDashboardData();
+    });
+</script>
