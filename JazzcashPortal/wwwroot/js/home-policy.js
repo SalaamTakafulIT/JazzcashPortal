@@ -144,6 +144,7 @@ function LoadHomePolicy(data) {
                 data: "POLICY_TRANSACTION_ID",
                 title: "Action",
                 width: "150px",
+                visible: userType,
                 render: function (data, type, row, meta) {
                     if (type === 'display') {
                         if (row["ENDORSEMENT_CODE"] == "" || row["ENDORSEMENT_CODE"] == null) {
@@ -208,12 +209,22 @@ $('#tblHomePolicy').on('click', '.reversePolicy', function (e) {
     });
 });
 
-//$('#btnSearch_HP').on('click', function (e) {
-//    e.preventDefault();
-//    SearchHomePolicy();
-//});
-
 $('#btnSearch_HP').on('click', function (e) {
+    //const form = document.getElementById('HomePolicyForm');
+    //if (form.checkValidity()) {
+    //    e.preventDefault();
+    //    SearchHomePolicy();
+    //} else {
+    //    form.reportValidity();
+    //}
+
+    // condition to skip validation
+    if (userType === "V") {
+        SearchHomePolicy();
+        return;
+    }
+
+    // normal validation
     const form = document.getElementById('HomePolicyForm');
     if (form.checkValidity()) {
         e.preventDefault();
