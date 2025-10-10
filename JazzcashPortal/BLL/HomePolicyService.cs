@@ -38,7 +38,7 @@ namespace JazzcashPortal.BLL
                 dbar.ErrorMessage = res.failedReason;
                 return dbar;
             }
-            bool output = _dal.ReversePolicy(policy_code);
+            bool output = _dal.ReversePolicy(policy_code, res.resultDesc, res.transactionId);
             if (output)
             {
                 dbar.Action = true;

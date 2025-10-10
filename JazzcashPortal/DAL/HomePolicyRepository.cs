@@ -66,13 +66,21 @@ namespace JazzcashPortal.DAL
         //    return return_value;
         //}
 
-        public bool ReversePolicy(string policy_code)
+        public bool ReversePolicy(string policy_code, string resultDesc, string transactionId)
         {
             OracleParameter[] param = new OracleParameter[]
             {
                 new OracleParameter("p_assorted_code", OracleDbType.NVarchar2, ParameterDirection.Input)
                 {
                     Value = policy_code
+                },
+                new OracleParameter("p_result_desc", OracleDbType.NVarchar2, ParameterDirection.Input)
+                {
+                    Value = resultDesc
+                },
+                new OracleParameter("p_transaction_id", OracleDbType.NVarchar2, ParameterDirection.Input)
+                {
+                    Value = transactionId
                 },
                 new OracleParameter("p_Ent_by", OracleDbType.NVarchar2, ParameterDirection.Input)
                 {
