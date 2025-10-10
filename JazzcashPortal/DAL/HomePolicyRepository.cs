@@ -91,7 +91,6 @@ namespace JazzcashPortal.DAL
             return _dbHelper.ExecuteNonQuery("proc_Household_ENDORSEMENT", CommandType.StoredProcedure, param);
         }
 
-
         //**************************************** Active Policies ****************************************
         public DataTable GetActivePolicies()
         {
