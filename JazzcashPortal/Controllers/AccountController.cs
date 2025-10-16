@@ -42,7 +42,7 @@ namespace JazzcashPortal.Controllers
                 if (dt.Rows.Count > 0)
                 {
                     string? role = dt.Rows[0]["JAZZCASH_USER_TYPE"].ToString();
-                    //HttpContext.Session.SetString("UserId", dt.Rows[0]["USER_ID"].ToString() ?? "");
+                    HttpContext.Session.SetString("UserType", dt.Rows[0]["USER_TYPE"].ToString() ?? "");
                     var claims = new List<Claim>
                     {
                         new Claim(ClaimTypes.Name, model.Username),

@@ -26,6 +26,8 @@ namespace JazzcashPortal.Controllers
                 PERIOD_TO = today.ToString("dd-MMM-yyyy"),
             };
 
+            ViewBag.ShowDiv = HttpContext.Session.GetString("UserType");
+
             return View(model);
         }
 
