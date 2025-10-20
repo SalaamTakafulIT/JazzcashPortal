@@ -91,6 +91,25 @@ namespace JazzcashPortal.DAL
             return _dbHelper.ExecuteNonQuery("proc_Household_ENDORSEMENT", CommandType.StoredProcedure, param);
         }
 
+        public DbActionResult UpdateAPIResponseAfterError(string policy_code, string resultDesc, string transactionId)
+        {
+            var dbar = new DbActionResult();
+            string query = @"UPDATE ins_jazzcash_lead 
+                     SET REVERSE_API_RESPONSE = :response, 
+                         REVERSE_TRANSACTION_ID = :txnId 
+                     WHERE POLICY_CODE = :policyCode";
+
+            var parameters = new OracleParameter[]
+            {
+                new OracleParameter("response", resultDesc),
+                new OracleParameter("txnId", transactionId),
+                new OracleParameter("policyCode", policy_code)
+            };
+
+            dbar = _dbHelper.SaveChanges(query, CommandType.Text, parameters);
+            return dbar;
+        }
+
         //**************************************** Active Policies ****************************************
         public DataTable GetActivePolicies()
         {

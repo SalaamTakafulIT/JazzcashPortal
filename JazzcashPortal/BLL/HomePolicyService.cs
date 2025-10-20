@@ -1,5 +1,6 @@
 ﻿using JazzcashPortal.DAL;
 using JazzcashPortal.Models;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Data;
@@ -31,23 +32,42 @@ namespace JazzcashPortal.BLL
         public async Task<DbActionResult> ReversePolicy(Jazzcash m, string policy_code)
         {
             var dbar = new DbActionResult();
+
+            // Step 1: Call API
             var result = await JazzcashResultAPI(m);
             SubApiResponse res = JsonConvert.DeserializeObject<SubApiResponse>(result.message);
+
+            // Step 2: Validate API response
             if (res.resultCode != "0")
             {
-                dbar.ErrorMessage = res.failedReason;
+                dbar.ErrorMessage = res.failedReason ?? "API returned an error.";
                 return dbar;
             }
-            bool output = _dal.ReversePolicy(policy_code, res.resultDesc, res.transactionId);
-            if (output)
+
+            try
             {
-                dbar.Action = true;
-                dbar.Message = "Refund Successfully.";
+                // Step 3: Attempt DB update (main logic)
+                bool output = _dal.ReversePolicy(policy_code, res.resultDesc, res.transactionId);
+
+                if (output)
+                {
+                    dbar.Action = true;
+                    dbar.Message = "Refund Successful.";
+                }
+                else
+                {
+                    // Step 4: Log API response if DB update failed
+                    dbar = _dal.UpdateAPIResponseAfterError(policy_code, res.resultDesc, res.transactionId);
+                    dbar.ErrorMessage = "Error occurred during refund update.";
+                }
             }
-            else
+            catch (Exception ex)
             {
-                dbar.ErrorMessage = "Error Occured.";
+                // Step 5: Log API response in case of exception
+                dbar = _dal.UpdateAPIResponseAfterError(policy_code, res.resultDesc ?? "", res.transactionId ?? "");
+                dbar.ErrorMessage = $"Exception occurred: {ex.Message}";
             }
+
             return dbar;
         }
 
