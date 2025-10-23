@@ -12,11 +12,6 @@ namespace JazzcashPortal.BLL
             _dal = dal;
         }
 
-        public DataTable GetTravelActivePolicy()
-        {
-            return _dal.GetTravelActivePolicy();
-        }
-
         public DataTable SearchTravelActivePolicy(TravelActivePolicy mdl)
         {
             return _dal.SearchTravelActivePolicy(mdl);
