@@ -29,7 +29,7 @@ namespace JazzcashPortal.BLL
             return _dal.SearchHomePolicy(mdl);
         }
 
-        public async Task<DbActionResult> ReversePolicy(Jazzcash m, string policy_code)
+        public async Task<DbActionResult> ReversePolicy(Jazzcash m, string policy_code, string? user_id)
         {
             var dbar = new DbActionResult();
 
@@ -47,7 +47,7 @@ namespace JazzcashPortal.BLL
             try
             {
                 // Step 3: Attempt DB update (main logic)
-                bool output = _dal.ReversePolicy(policy_code, res.resultDesc, res.transactionId);
+                bool output = _dal.ReversePolicy(policy_code, res.resultDesc, res.transactionId, user_id);
 
                 if (output)
                 {

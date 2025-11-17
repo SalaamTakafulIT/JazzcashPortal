@@ -99,7 +99,7 @@ namespace JazzcashPortal.Controllers
                     IV = iv
                 };
                 // Call the BLL method to reverse the policy
-                dbar = await _BLLS.ReversePolicy(obj, policy_code);
+                dbar = await _BLLS.ReversePolicy(obj, policy_code, User.Identity?.Name);
                 return Json(dbar);
             }
             catch (Exception)

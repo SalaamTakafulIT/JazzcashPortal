@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JazzcashPortal")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d43cf3071136824c49c3ee220d7fdef8813b5384")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a5f67cc0a3f695f1045d73e7a85f26a3930cb83")]
 [assembly: System.Reflection.AssemblyProductAttribute("JazzcashPortal")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JazzcashPortal")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -66,7 +66,7 @@ namespace JazzcashPortal.DAL
         //    return return_value;
         //}
 
-        public bool ReversePolicy(string policy_code, string resultDesc, string transactionId)
+        public bool ReversePolicy(string policy_code, string resultDesc, string transactionId, string? user_id)
         {
             OracleParameter[] param = new OracleParameter[]
             {
@@ -84,7 +84,7 @@ namespace JazzcashPortal.DAL
                 },
                 new OracleParameter("p_Ent_by", OracleDbType.NVarchar2, ParameterDirection.Input)
                 {
-                    Value = "Jazzcash"
+                    Value = user_id
                 }
             };
 
