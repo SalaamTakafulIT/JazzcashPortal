@@ -91,19 +91,22 @@ namespace JazzcashPortal.DAL
             return _dbHelper.ExecuteNonQuery("proc_Household_ENDORSEMENT", CommandType.StoredProcedure, param);
         }
 
-        public DbActionResult UpdateAPIResponseAfterError(string policy_code, string resultDesc, string transactionId)
+        public DbActionResult UpdateAPIResponseAfterError(string policy_code, string resultDesc, string transactionId, string? user_id)
         {
             var dbar = new DbActionResult();
             string query = @"UPDATE ins_jazzcash_lead 
                      SET REVERSE_API_RESPONSE = :response, 
-                         REVERSE_TRANSACTION_ID = :txnId 
+                         REVERSE_TRANSACTION_ID = :txnId,
+                         CANCEL_BY = :entBy,
+                         CANCEL_AT = SYSDATE
                      WHERE POLICY_CODE = :policyCode";
 
             var parameters = new OracleParameter[]
             {
-                new OracleParameter("response", resultDesc),
-                new OracleParameter("txnId", transactionId),
-                new OracleParameter("policyCode", policy_code)
+                new OracleParameter("response", OracleDbType.Varchar2, 500) { Value = resultDesc },
+                new OracleParameter("txnId", OracleDbType.Varchar2, 50) { Value = transactionId },
+                new OracleParameter("entBy", OracleDbType.Varchar2, 50) { Value = user_id },
+                new OracleParameter("policyCode", OracleDbType.Varchar2, 50) { Value = policy_code }
             };
 
             dbar = _dbHelper.SaveChanges(query, CommandType.Text, parameters);
