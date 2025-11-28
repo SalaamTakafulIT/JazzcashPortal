@@ -1249,7 +1249,6 @@ D:\kashif\Github Projects\JazzcashPortal\JazzcashPortal\obj\Debug\net8.0\staticw
 D:\kashif\Github Projects\JazzcashPortal\JazzcashPortal\obj\Debug\net8.0\staticwebassets.build.json.cache
 D:\kashif\Github Projects\JazzcashPortal\JazzcashPortal\obj\Debug\net8.0\staticwebassets.development.json
 D:\kashif\Github Projects\JazzcashPortal\JazzcashPortal\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-D:\kashif\Github Projects\JazzcashPortal\JazzcashPortal\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\kashif\Github Projects\JazzcashPortal\JazzcashPortal\obj\Debug\net8.0\Jazzcash.D9CA4EE1.Up2Date
 D:\kashif\Github Projects\JazzcashPortal\JazzcashPortal\obj\Debug\net8.0\JazzcashPortal.dll
 D:\kashif\Github Projects\JazzcashPortal\JazzcashPortal\obj\Debug\net8.0\refint\JazzcashPortal.dll
