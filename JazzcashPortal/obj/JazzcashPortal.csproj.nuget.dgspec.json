@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\JazzcashPortal.csproj": {}
+    "D:\\kashif\\Github Projects\\JazzcashPortal\\JazzcashPortal\\JazzcashPortal.csproj": {}
   },
   "projects": {
-    "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\JazzcashPortal.csproj": {
+    "D:\\kashif\\Github Projects\\JazzcashPortal\\JazzcashPortal\\JazzcashPortal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\JazzcashPortal.csproj",
+        "projectUniqueName": "D:\\kashif\\Github Projects\\JazzcashPortal\\JazzcashPortal\\JazzcashPortal.csproj",
         "projectName": "JazzcashPortal",
-        "projectPath": "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\JazzcashPortal.csproj",
-        "packagesPath": "C:\\Users\\m.hassaan\\.nuget\\packages\\",
-        "outputPath": "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\obj\\",
+        "projectPath": "D:\\kashif\\Github Projects\\JazzcashPortal\\JazzcashPortal\\JazzcashPortal.csproj",
+        "packagesPath": "C:\\Users\\kashif.sarwar\\.nuget\\packages\\",
+        "outputPath": "D:\\kashif\\Github Projects\\JazzcashPortal\\JazzcashPortal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\m.hassaan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kashif.sarwar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -98,7 +98,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
