@@ -40,6 +40,7 @@ namespace JazzcashPortal.BLL
             // Step 2: Validate API response
             if (res.resultCode != "0")
             {
+                _dal.UpdateAPIResponseAfterError(policy_code, res.resultDesc, res.transactionId, user_id);
                 dbar.ErrorMessage = res.failedReason ?? "API returned an error.";
                 return dbar;
             }
@@ -57,14 +58,14 @@ namespace JazzcashPortal.BLL
                 else
                 {
                     // Step 4: Log API response if DB update failed
-                    dbar = _dal.UpdateAPIResponseAfterError(policy_code, res.resultDesc, res.transactionId, user_id);
+                    _dal.UpdateAPIResponseAfterError(policy_code, res.resultDesc, res.transactionId, user_id);
                     dbar.ErrorMessage = "Error occurred during refund update.";
                 }
             }
             catch (Exception ex)
             {
                 // Step 5: Log API response in case of exception
-                dbar = _dal.UpdateAPIResponseAfterError(policy_code, res.resultDesc ?? "", res.transactionId ?? "", user_id);
+                _dal.UpdateAPIResponseAfterError(policy_code, res.resultDesc ?? "", res.transactionId ?? "", user_id);
                 dbar.ErrorMessage = $"Exception occurred: {ex.Message}";
             }
 
