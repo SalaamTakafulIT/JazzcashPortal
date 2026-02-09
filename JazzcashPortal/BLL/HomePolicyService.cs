@@ -31,11 +31,13 @@ namespace JazzcashPortal.BLL
 
         public async Task<DbActionResult> ReversePolicy(Jazzcash m, string policy_code, string? user_id)
         {
+            ClsLog objLog = new ClsLog();
             var dbar = new DbActionResult();
 
             // Step 1: Call API
             var result = await JazzcashResultAPI(m);
             SubApiResponse res = JsonConvert.DeserializeObject<SubApiResponse>(result.message);
+            objLog.WriteToFile("\n\nFailed_Reason: " + res.failedReason + ", Ref_Id: " + res.referenceid + ", Result_Code: " + res.resultCode + ", Timestamp: " + res.timeStamp, null);
 
             // Step 2: Validate API response
             if (res.resultCode != "0")
