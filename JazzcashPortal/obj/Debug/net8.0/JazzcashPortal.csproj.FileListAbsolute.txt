@@ -1255,3 +1255,4 @@ D:\kashif\Github Projects\JazzcashPortal\JazzcashPortal\obj\Debug\net8.0\refint\
 D:\kashif\Github Projects\JazzcashPortal\JazzcashPortal\obj\Debug\net8.0\JazzcashPortal.pdb
 D:\kashif\Github Projects\JazzcashPortal\JazzcashPortal\obj\Debug\net8.0\JazzcashPortal.genruntimeconfig.cache
 D:\kashif\Github Projects\JazzcashPortal\JazzcashPortal\obj\Debug\net8.0\ref\JazzcashPortal.dll
+D:\kashif\Github Projects\JazzcashPortal\JazzcashPortal\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
