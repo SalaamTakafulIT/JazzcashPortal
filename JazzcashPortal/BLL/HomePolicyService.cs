@@ -31,15 +31,18 @@ namespace JazzcashPortal.BLL
 
         public async Task<DbActionResult> ReversePolicy(Jazzcash m, string policy_code, string? user_id)
         {
+            ClsLog objLog = new ClsLog();
             var dbar = new DbActionResult();
 
             // Step 1: Call API
             var result = await JazzcashResultAPI(m);
             SubApiResponse res = JsonConvert.DeserializeObject<SubApiResponse>(result.message);
+            objLog.WriteToFile("\n\nFailed_Reason: " + res.failedReason + ", Ref_Id: " + res.referenceid + ", Result_Code: " + res.resultCode + ", Timestamp: " + res.timeStamp, null);
 
             // Step 2: Validate API response
             if (res.resultCode != "0")
             {
+                _dal.UpdateAPIResponseAfterError(policy_code, res.resultDesc, res.transactionId, user_id);
                 dbar.ErrorMessage = res.failedReason ?? "API returned an error.";
                 return dbar;
             }
@@ -57,14 +60,14 @@ namespace JazzcashPortal.BLL
                 else
                 {
                     // Step 4: Log API response if DB update failed
-                    dbar = _dal.UpdateAPIResponseAfterError(policy_code, res.resultDesc, res.transactionId);
+                    _dal.UpdateAPIResponseAfterError(policy_code, res.resultDesc, res.transactionId, user_id);
                     dbar.ErrorMessage = "Error occurred during refund update.";
                 }
             }
             catch (Exception ex)
             {
                 // Step 5: Log API response in case of exception
-                dbar = _dal.UpdateAPIResponseAfterError(policy_code, res.resultDesc ?? "", res.transactionId ?? "");
+                _dal.UpdateAPIResponseAfterError(policy_code, res.resultDesc ?? "", res.transactionId ?? "", user_id);
                 dbar.ErrorMessage = $"Exception occurred: {ex.Message}";
             }
 

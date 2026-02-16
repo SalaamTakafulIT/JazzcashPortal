@@ -4108,28 +4108,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kashif.sarwar\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages": {}
+    "C:\\Users\\m.hassaan\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\kashif\\Github Projects\\JazzcashPortal\\JazzcashPortal\\JazzcashPortal.csproj",
+      "projectUniqueName": "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\JazzcashPortal.csproj",
       "projectName": "JazzcashPortal",
-      "projectPath": "D:\\kashif\\Github Projects\\JazzcashPortal\\JazzcashPortal\\JazzcashPortal.csproj",
-      "packagesPath": "C:\\Users\\kashif.sarwar\\.nuget\\packages\\",
-      "outputPath": "D:\\kashif\\Github Projects\\JazzcashPortal\\JazzcashPortal\\obj\\",
+      "projectPath": "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\JazzcashPortal.csproj",
+      "packagesPath": "C:\\Users\\m.hassaan\\.nuget\\packages\\",
+      "outputPath": "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\kashif.sarwar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\m.hassaan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Telerik UI for WPF.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -4208,7 +4205,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
