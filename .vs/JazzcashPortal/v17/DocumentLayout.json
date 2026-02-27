@@ -61,9 +61,10 @@
               "RelativeDocumentMoniker": "JazzcashPortal\\Models\\ClsLog.cs",
               "ToolTip": "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\Models\\ClsLog.cs",
               "RelativeToolTip": "JazzcashPortal\\Models\\ClsLog.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-09T10:45:40.286Z"
+              "WhenOpened": "2026-02-09T10:45:40.286Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -109,7 +110,7 @@
               "RelativeDocumentMoniker": "JazzcashPortal\\BLL\\HomePolicyService.cs",
               "ToolTip": "D:\\Git Project\\JazzcashPortal\\JazzcashPortal\\BLL\\HomePolicyService.cs",
               "RelativeToolTip": "JazzcashPortal\\BLL\\HomePolicyService.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAIAwwCUAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAASwCcAAAC3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-17T07:57:30.355Z",
               "EditorCaption": ""

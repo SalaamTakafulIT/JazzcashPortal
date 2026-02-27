@@ -37,7 +37,7 @@ namespace JazzcashPortal.BLL
             // Step 1: Call API
             var result = await JazzcashResultAPI(m);
             SubApiResponse res = JsonConvert.DeserializeObject<SubApiResponse>(result.message);
-            objLog.WriteToFile("\n\nFailed_Reason: " + res.failedReason + ", Ref_Id: " + res.referenceid + ", Result_Code: " + res.resultCode + ", Timestamp: " + res.timeStamp, null);
+            objLog.WriteToFile("\n\nFailed_Reason: " + res.failedReason + ", Ref_Id: " + res.referenceid + ", Result_Code: " + res.resultCode + ", Timestamp: " + res.timeStamp + ", Policy Code: " + policy_code, null);
 
             // Step 2: Validate API response
             if (res.resultCode != "0")
